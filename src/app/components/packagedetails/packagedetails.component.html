@@ -1,0 +1,29 @@
+
+<div class="packagedetails">
+    <ngb-tabset (tabChange)="callBackend($event)" [destroyOnHide]="false">
+      <ngb-tab *ngFor="let package of packages" [title]="package.text" [id]="package" >
+          <ng-template ngbTabContent  >
+
+        <div *ngFor="let alldetails of packageDetails">
+      
+          <strong>{{alldetails.speed}}</strong>
+         <table class="table-view">
+           <tr>
+             <th>Duration</th>
+             <th>price</th>
+
+           </tr>
+           <tr *ngFor="let packages of alldetails.details">
+             <td>{{packages.months}} months</td>
+             <td>{{packages.price }}</td>
+
+            
+           </tr>
+         </table>
+        </div>
+
+        </ng-template>
+  
+      </ngb-tab>
+    </ngb-tabset>
+  </div>
