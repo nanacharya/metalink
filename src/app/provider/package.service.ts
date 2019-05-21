@@ -92,22 +92,22 @@ export class PackageService {
       details:[
         {
           months:1,
-          price:1500
-
-        },
-        {
-          months:3,
           price:2500
 
         },
         {
-          months:6,
+          months:3,
           price:3500
 
         },
         {
+          months:6,
+          price:4500
+
+        },
+        {
           months:12,
-          price:5500
+          price:6000
 
         },
       ]
@@ -117,22 +117,22 @@ export class PackageService {
       details:[
         {
           months:1,
-          price:1500
-
-        },
-        {
-          months:3,
-          price:2500
-
-        },
-        {
-          months:6,
           price:3500
 
         },
         {
-          months:12,
+          months:3,
+          price:4500
+
+        },
+        {
+          months:6,
           price:5500
+
+        },
+        {
+          months:12,
+          price:7500
 
         },
       ]
@@ -143,22 +143,22 @@ export class PackageService {
     details:[
       {
         months:1,
-        price:2500
-
-      },
-      {
-        months:3,
         price:3500
 
       },
       {
-        months:6,
+        months:3,
         price:4500
 
       },
       {
+        months:6,
+        price:5500
+
+      },
+      {
         months:12,
-        price:7500
+        price:8500
 
       },
     ]

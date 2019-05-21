@@ -1,5 +1,4 @@
-
-<div class="packagedetails">
+<!-- <div class="packagedetails">
     <ngb-tabset (tabChange)="callBackend($event)" [destroyOnHide]="false">
       <ngb-tab *ngFor="let package of packages" [title]="package.text" [id]="package" >
           <ng-template ngbTabContent  >
@@ -26,4 +25,32 @@
   
       </ngb-tab>
     </ngb-tabset>
-  </div>
+  </div> -->
+
+
+  <!-- <div class="center">Is this in center ?? </div> -->
+
+  <div class="center">
+
+<button class="newoffer offer" (click)="callBackend(1)">New</button>
+<button class="oldoffer offer"  (click)="callBackend(2)"> Renew</button>
+
+<div class="table-view " *ngFor="let packages of packageDetails">
+  <h3 class="package"><strong>Speed :- </strong>{{packages.speed}}</h3>
+  <table>
+  <tr>
+    <th>Duration</th>
+    <th>price</th>
+
+  </tr>
+ 
+  <tr *ngFor="let pack of packages.details">
+    <td>{{pack.months}} months</td>
+    <td>{{pack.price }}</td>
+
+
+  </tr>
+</table>
+</div>
+
+</div>

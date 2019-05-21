@@ -27,15 +27,26 @@ packageDetails:any;
 
   ngOnInit() {
    this.packageDetails= this.service.getPackage(1);
+   console.log(this.packageDetails);
 
   }
 
-  callBackend(event){
-    debugger;
-console.log(event);
-let id=event.nextId.packageid;
+  callBackend(id){
+    
  this.packageDetails=this.service.getPackage(id);
  console.log(this.packageDetails)
 
   }
+
+  // from tab calling
+
+
+//   callBackend(event){
+//     debugger;
+// console.log(event);
+// let id=event.nextId.packageid;
+//  this.packageDetails=this.service.getPackage(id);
+//  console.log(this.packageDetails)
+
+//   }
 }
