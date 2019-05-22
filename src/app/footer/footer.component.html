@@ -39,7 +39,12 @@
     <div class="messageForm" *ngIf="showform===true">
     <form [formGroup]="form" (ngSubmit)="submitForm()">
       <input type="text" class="form-control" formControlName="name" placeholder="Complete Name"> <br/>
-      <input type="text" class="form-control" formControlName="email" placeholder="Your Email"><br/>
+      <input type="text" class="form-control" formControlName="email" placeholder="Your Email">
+      <div class="alert alert-danger" *ngIf="email.touched && email.errors">Please type the right email format (ex. abcd@abc.com)</div>
+
+      
+      
+      <br/>
       <input type="text" class="form-control" formControlName="subject" placeholder="Subject"><br/>
       <input type="text" class="form-control" formControlName="message" placeholder="Message"><br/>
       <button type="submit" class="submitbtn">Submit</button>
