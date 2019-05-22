@@ -7,6 +7,8 @@ import { DashboardbannerComponent } from './components/dashboardbanner/dashboard
 import { NguCarouselModule } from '@ngu/carousel';
 import {NgbModule, NgbCarousel} from '@ng-bootstrap/ng-bootstrap';
 import { PackagedetailsComponent } from './components/packagedetails/packagedetails.component';
+import { FooterComponent } from './footer/footer.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -18,6 +20,7 @@ import { PackagedetailsComponent } from './components/packagedetails/packagedeta
     MegamenuComponent,
     DashboardbannerComponent,
     PackagedetailsComponent,
+    FooterComponent,
     
     
   ],
@@ -25,6 +28,8 @@ import { PackagedetailsComponent } from './components/packagedetails/packagedeta
     BrowserModule,
     NguCarouselModule,
     NgbModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

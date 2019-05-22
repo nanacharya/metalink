@@ -1,0 +1,53 @@
+<div class="container footer">
+    <div class="row">
+  
+  <div class="col-sm quick"  >
+    <h5>
+      Quick Links
+    </h5>
+    <a href="#">Admin login</a> <br/>
+    <a href="#">Customer login</a>
+    
+  </div>
+  
+  <div class="col-sm" > 
+    <h5>
+      Information
+    </h5>
+    <a href="#" >Link & Resources</a> <br/>
+    <a href="#">About Us</a> <br/>
+  
+  </div>
+  
+  <div class="col-sm" > 
+    <h5>
+    Contact Information
+    </h5>
+  
+    Atlanta, GA <br/>
+    30345
+    
+  
+  </div>
+  
+  <div class="col-sm"> 
+    <h5>
+     Message Us
+      <label *ngIf="showform===false"  class="btn" (click)="showForm(true)">+</label>
+      <label *ngIf="showform===true"  class="btn"  (click)="showForm(false)">-</label>
+    </h5>
+    <div class="messageForm" *ngIf="showform===true">
+    <form [formGroup]="form" (ngSubmit)="submitForm()">
+      <input type="text" class="form-control" formControlName="name" placeholder="Complete Name"> <br/>
+      <input type="text" class="form-control" formControlName="email" placeholder="Your Email"><br/>
+      <input type="text" class="form-control" formControlName="subject" placeholder="Subject"><br/>
+      <input type="text" class="form-control" formControlName="message" placeholder="Message"><br/>
+      <button type="submit" class="submitbtn">Submit</button>
+  
+    </form>
+  </div>
+  </div>
+   
+  </div>
+  </div>
+  
