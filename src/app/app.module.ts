@@ -9,6 +9,7 @@ import {NgbModule, NgbCarousel} from '@ng-bootstrap/ng-bootstrap';
 import { PackagedetailsComponent } from './components/packagedetails/packagedetails.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LoginpageComponent } from './components/loginpage/loginpage.component';
 
 
 
@@ -21,8 +22,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     DashboardbannerComponent,
     PackagedetailsComponent,
     FooterComponent,
-    
-    
+    LoginpageComponent,
+
+
   ],
   imports: [
     BrowserModule,

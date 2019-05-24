@@ -26,7 +26,6 @@ showform:boolean;
   }
 
 get email(){
-  debugger;
   return this.form.get("email");
 }
   submitForm(){
