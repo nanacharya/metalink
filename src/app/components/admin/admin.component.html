@@ -1,0 +1,38 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="sb2-1">
+
+
+      
+<ngb-accordion  activeIds="1" 
+*ngFor="let menu of adminMenu">
+
+<ngb-panel id="menu.id" >
+
+  <ng-template ngbPanelTitle>
+
+    <span *ngIf="menu.childMenu.length===0"><a [routerLink]="menu.route">{{menu.menuText}}</a></span>
+    <span *ngIf="menu.childMenu.length>0">{{menu.menuText}}</span>
+  </ng-template>
+
+  <ng-template ngbPanelContent *ngIf="menu.childMenu.length>0">
+    <ul *ngFor="let submenu of menu.childMenu">
+      <li><a [routerLink]="submenu.route" >{{submenu.menuText}}</a></li>
+    </ul>
+   
+  </ng-template>
+
+</ngb-panel>
+</ngb-accordion>
+
+
+    </div>
+
+    <div class="sb2-2">
+      <router-outlet></router-outlet>
+    </div>
+
+  </div>
+</div>
+
+

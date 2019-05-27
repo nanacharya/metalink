@@ -14,50 +14,65 @@ export class MegamenuComponent implements OnInit {
         id:0,
         text:"Services",
         menuLevel:0,
-        route:"/services"
-        
+        route:"/services",
+        hidden:"false"
+
       },
       {
         id:1,
         text:"Support",
         menuLevel:0,
-        route:"/support"
-        
+        route:"/support",
+        hidden:"false"
+
+
       },
       {
         id:2,
         text:"Bill & Payment",
         menuLevel:0,
-        route:"/billpayment"
-        
+        route:"/billpayment",
+        hidden:"false"
+
       },
       {
         id:3,
         text:"Online Services",
         menuLevel:0,
         route:"/onlineservices"
-        
+
       },
       {
         id:4,
         text:"Company",
         menuLevel:0,
-        route:"/company"
-        
+        route:"/company",
+        hidden:"false"
+
       },
       {
         id:5,
         text:"Career",
         menuLevel:0,
-        route:"/career"
-        
+        route:"/career",
+        hidden:"false"
+
       },
       {
         id:6,
+        text:"Admin Login",
+        menuLevel:0,
+        route:"/admin",
+        hidden:"false"
+
+      },
+      {
+        id:7,
         text:"Contact",
         menuLevel:0,
-        route:"/contact"
-        
+        route:"/contact",
+        hidden:"false"
+
       },
     ]
    }
