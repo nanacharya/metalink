@@ -1,3 +1,11 @@
-<p>
-  all-customer works!
-</p>
+<ag-grid-angular
+  #agGrid
+  style="width: 900px; height: 700px;"
+  class="ag-theme-balham"
+  [rowData]="rowData"
+  [columnDefs]="columnDefs"
+  rowSelection="multiple"
+>
+</ag-grid-angular>
+
+<button cls="btn btn-primary" (click)="getSelectedData()">Get Selected Data</button>

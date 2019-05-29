@@ -13,6 +13,7 @@ import { ProspectsComponent } from './prospects/prospects.component';
 import { MapsComponent } from './maps/maps.component';
 import { DocumentComponent } from './document/document.component';
 import { AllCustomerComponent } from './customer/all-customer/all-customer.component';
+import {AgGridModule} from "ag-grid-angular";
 
 const adminRoute: Routes = [
   {
@@ -41,6 +42,7 @@ const adminRoute: Routes = [
   imports: [
     CommonModule,
     RouterModule.forRoot(adminRoute),
+    AgGridModule,
   ]
 })
 

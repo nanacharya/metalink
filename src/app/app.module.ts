@@ -22,6 +22,9 @@ import { HeaderhomeComponent } from './megamenu/headers/headerhome/headerhome.co
 import { NotfoundComponent } from './components/notfound/notfound.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { AdminModule } from './components/admin/admin.module';
+import {AgGridModule} from "ag-grid-angular";
+import {AllcustomerService} from "./provider/allcustomer.service";
+import { HttpClientModule} from "@angular/common/http";
 
 const routes:Routes=[
   {path:'' , component:HeaderhomeComponent},
@@ -68,9 +71,11 @@ const routes:Routes=[
     FormsModule,
     ReactiveFormsModule,
     RouterModule.forRoot(routes),
-    AdminModule
+    AdminModule,
+    AgGridModule.withComponents([]),
+    HttpClientModule
   ],
-  providers: [],
+  providers: [AllcustomerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
