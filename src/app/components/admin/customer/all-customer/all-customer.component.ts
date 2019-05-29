@@ -19,12 +19,21 @@ export class AllCustomerComponent implements OnInit {
 
   columnDefs = [
     {headerName: 'Make', field: 'make', sortable: true, filter: false, checkboxSelection: true},
-    {headerName: 'Model', field: 'model', sortable: false, filter: true},
+    //{headerName: 'Model', field: 'model', sortable: false, filter: true},
     {headerName: 'Price', field: 'price', sortable: true, filter: true},
     {headerName: 'Second Make', field: 'make', sortable: true, filter: false},
     {headerName: 'Second Price', field: 'price', sortable: true, filter: false},
 
   ];
+
+  autoGroupColumnDef={
+    headerName:"ModelGroup",
+    field:'model',
+    cellRenderer:'agGroupCellRenderer',
+    cellRendererParams:{
+      chekbox:true
+    }
+  };
 
   rowData: any;
 

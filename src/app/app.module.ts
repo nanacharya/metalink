@@ -26,6 +26,8 @@ import {AgGridModule} from "ag-grid-angular";
 import {AllcustomerService} from "./provider/allcustomer.service";
 import { HttpClientModule} from "@angular/common/http";
 
+import "ag-grid-enterprise";
+
 const routes:Routes=[
   {path:'' , component:HeaderhomeComponent},
   {path:'services' , component:HeaderservicesComponent},
