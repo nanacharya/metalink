@@ -21,6 +21,7 @@ export class AdminComponent implements OnInit {
         menuText: "Home",
         collapseId: "homeCollapse",
         route: "./home",
+        iconCls:"mdi mdi-home",
         childMenu: [
         
         ]
@@ -29,6 +30,7 @@ export class AdminComponent implements OnInit {
         id: 2,
         menuText: "Customers",
         collapseId: "customersCollapse",
+        iconCls:"mdi mdi-home",
         route: "",
         childMenu: [
           {
@@ -65,6 +67,7 @@ export class AdminComponent implements OnInit {
         id: 3,
         menuText: "Profile",
         route: "./profile",
+        iconCls:"mdi mdi-home",
         childMenu: [
                  ]
       },
@@ -72,6 +75,7 @@ export class AdminComponent implements OnInit {
         id: 1,
         menuText: "Locations",
         route: "./location",
+        iconCls:"mdi mdi-location_on",
         childMenu: [
          
         ]
@@ -80,6 +84,7 @@ export class AdminComponent implements OnInit {
         id: 1,
         menuText: "Support",
         route: "./support",
+        iconCls:"mdi mdi-ring_volume",
         childMenu: [
           
         ]
@@ -88,6 +93,7 @@ export class AdminComponent implements OnInit {
         id: 1,
         menuText: "Finance",
         route: "",
+        iconCls:"mdi mdi-money",
         childMenu: [
           {
             menuText: "Send Money",
@@ -103,6 +109,7 @@ export class AdminComponent implements OnInit {
         id: 1,
         menuText: "Fiber",
         route: "./fiber",
+        iconCls:"mdi mdi-fiber_new",
         childMenu: [
          
         ]
@@ -111,6 +118,7 @@ export class AdminComponent implements OnInit {
         id: 1,
         menuText: "Prospects",
         route: "prospect",
+        iconCls:"mdi mdi-device_hub",
         childMenu: [
          
         ]
@@ -119,6 +127,7 @@ export class AdminComponent implements OnInit {
         id: 1,
         menuText: "Map",
         route: "./map",
+        iconCls:"mdi mdi-place",
         childMenu: [
           
         ]
@@ -126,6 +135,7 @@ export class AdminComponent implements OnInit {
       {
         id: 1,
         menuText: "Document",
+        iconCls:"mdi mdi-file_copy",
         route: "",
         childMenu: [
           {

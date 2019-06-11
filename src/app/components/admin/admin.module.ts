@@ -14,6 +14,7 @@ import { MapsComponent } from './maps/maps.component';
 import { DocumentComponent } from './document/document.component';
 import { AllCustomerComponent } from './customer/all-customer/all-customer.component';
 import {AgGridModule} from "ag-grid-angular";
+import {MatExpansionModule} from "@angular/material";
 
 const adminRoute: Routes = [
   {
@@ -43,6 +44,7 @@ const adminRoute: Routes = [
     CommonModule,
     RouterModule.forRoot(adminRoute),
     AgGridModule,
+    MatExpansionModule
   ]
 })
 
