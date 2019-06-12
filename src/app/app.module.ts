@@ -31,6 +31,7 @@ import {MatExpansionModule} from "@angular/material";
 import {MatIconModule} from '@angular/material/icon'
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {AgmCoreModule} from "@agm/core";
+import {CreateCustomerModule} from "./components/admin/customer/create-customer/create-customer.module";
 
 const routes: Routes = [
   {path: '', component: HeaderhomeComponent},
@@ -45,7 +46,7 @@ const routes: Routes = [
   {path: '**', component: NotfoundComponent}
 
 
-]
+];
 
 @NgModule({
   declarations: [
@@ -83,8 +84,8 @@ const routes: Routes = [
     MatIconModule,
     AgmCoreModule.forRoot({
       apiKey: "AIzaSyC5MwxNX-MUEU3vHDcd8BK5KfjV4eZSv2I"
-    })
-
+    }),
+    CreateCustomerModule
   ],
   providers: [AllcustomerService],
   bootstrap: [AppComponent]
