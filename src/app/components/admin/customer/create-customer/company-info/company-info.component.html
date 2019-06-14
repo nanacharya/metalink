@@ -1,0 +1,14 @@
+
+<h3>Company Info </h3>
+<label><strong>Company Name :</strong></label>
+
+<input type="text" [(ngModel)]="company.comapnyname" name="comapnyname" #comapnyname="ngModel" placeholder="comapnyname"><br>
+
+<label><strong>Company Address :</strong></label>
+
+<input type="text" [(ngModel)]="company.comapanyaddress" name="comapanyaddress" #state="ngModel" placeholder="comapanyaddress"><br>
+
+
+<button class="btn btn-primary" (click)="nextButton()">Next</button>
+
+<button class="btn btn-primary" (click)="privious()">Previous</button>

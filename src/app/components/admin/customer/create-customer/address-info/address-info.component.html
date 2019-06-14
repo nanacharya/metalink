@@ -1,0 +1,17 @@
+<h3>Address Info</h3>
+
+<label><strong>City :</strong></label>
+<input type="text" [(ngModel)]="address.city" name="city" #city="ngModel" placeholder="city"><br>
+
+<label><strong>State :</strong></label>
+
+<input type="text" [(ngModel)]="address.state" name="state" #state="ngModel" placeholder="state"><br>
+
+<label><strong>Zip :</strong></label>
+
+<input type="text" [(ngModel)]="address.zip" name="zip" #zip="ngModel" placeholder="zip"><br>
+
+<button class="btn btn-primary" (click)="nextButton()">Next</button>
+
+<button class="btn btn-primary" (click)="privious()">Previous</button>
+

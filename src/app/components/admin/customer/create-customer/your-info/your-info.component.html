@@ -1,0 +1,22 @@
+<div class="content">
+  <h3>Personal Information</h3>
+  <div>
+    <label><strong>First Name : </strong></label>
+
+    <input type="text" placeholder="type your first name" [(ngModel)]="personal.firstname" name="firstname"
+           #firstname="ngModel">
+
+  </div>
+
+  <label><strong>Last Name : </strong></label>
+
+  <input type="text" placeholder="type your last name" [(ngModel)]="personal.lastname" name="lastname"
+         #lastname="ngModel"> <br>
+
+  <label><strong>Birth Date : </strong></label>
+
+  <input type="text" placeholder="type your date of birth" [(ngModel)]="personal.dob" name="firstName" #dob="ngModel">
+  <br>
+
+  <button class="btn btn-primary" (click)="gonext()">Next</button>
+</div>

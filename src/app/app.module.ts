@@ -32,6 +32,21 @@ import {MatIconModule} from '@angular/material/icon'
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {AgmCoreModule} from "@agm/core";
 import {CreateCustomerModule} from "./components/admin/customer/create-customer/create-customer.module";
+import {HomeComponent} from "./components/admin/home/home.component";
+import {CustomerComponent} from "./components/admin/customer/customer.component";
+import {ProfileComponent} from "./components/admin/profile/profile.component";
+import {LocationComponent} from "./components/admin/location/location.component";
+import {SupportComponent} from "./components/admin/support/support.component";
+import {FiberComponent} from "./components/admin/fiber/fiber.component";
+import {ProspectsComponent} from "./components/admin/prospects/prospects.component";
+import {MapsComponent} from "./components/admin/maps/maps.component";
+import {DocumentComponent} from "./components/admin/document/document.component";
+import {AllCustomerComponent} from "./components/admin/customer/all-customer/all-customer.component";
+import {CreateCustomerComponent} from "./components/admin/customer/create-customer/create-customer.component";
+import {YourInfoComponent} from "./components/admin/customer/create-customer/your-info/your-info.component";
+import {AddressInfoComponent} from "./components/admin/customer/create-customer/address-info/address-info.component";
+import {CompanyInfoComponent} from "./components/admin/customer/create-customer/company-info/company-info.component";
+import {SubmitComponent} from "./components/admin/customer/create-customer/submit/submit.component";
 
 const routes: Routes = [
   {path: '', component: HeaderhomeComponent},
@@ -42,7 +57,32 @@ const routes: Routes = [
   {path: 'career', component: HeadercarrerComponent},
   {path: 'contact', component: HeadersupportComponent},
   {path: 'billpayment', component: HeaderbillpaymentComponent},
+  {
+    path: "admin", component: AdminComponent,
+    children: [
+      {path: "home", component: HomeComponent},
+      {path: "customer", component: CustomerComponent},
+      {path: "profile", component: ProfileComponent},
+      {path: "location", component: LocationComponent},
+      {path: "support", component: SupportComponent},
+      {path: "finance", component: FiberComponent},
+      {path: "fiber", component: AdminComponent},
+      {path: "prospect", component: ProspectsComponent},
+      {path: "map", component: MapsComponent},
+      {path: "document", component: DocumentComponent},
+      {path: "allcustomer", component: AllCustomerComponent},
+      {
+        path: "createcustomer", component: CreateCustomerComponent,
+        children: [
+          {path: "yourinfo", component: YourInfoComponent},
+          {path: "addressinfo", component: AddressInfoComponent},
+          {path: "companyinfo", component: CompanyInfoComponent},
+          {path: "submit", component: SubmitComponent},
+        ]
+      }
 
+    ]
+  },
   {path: '**', component: NotfoundComponent}
 
 

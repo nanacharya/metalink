@@ -1,0 +1,60 @@
+.form {
+  width: 50%;
+  margin: auto;
+  padding: 20px;
+
+  ul {
+    list-style: none;
+
+    li {
+      float: left;
+      padding: 10px;
+
+    }
+  }
+
+  .clr {
+    clear: both;
+  }
+
+  img {
+    width: 66px;
+    height: 68px;
+    padding: 12px;
+    border: 1px solid red;
+    border-radius: 99px;
+
+  }
+
+  a.active {
+    img {
+      background-color: #22d40c;
+
+    }
+  }
+
+
+}
+
+
+.liner {
+  height: 2px;
+  background: blue;
+  position: absolute;
+  width: 80%;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 50%;
+  z-index: 1;
+}
+
+.content {
+  align-content: center;
+  align-self: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+
