@@ -26,7 +26,7 @@ export class FormDataService {
   setPersonalData(personal: Personal) {
     this.formModal.firstname = personal.firstname;
     this.formModal.lastname = personal.lastname;
-    this.formModal.dob = personal.dob
+    this.formModal.dob = personal.dob;
 
   }
 
@@ -42,12 +42,12 @@ export class FormDataService {
       state: this.formModal.state,
       city: this.formModal.city,
       zip: this.formModal.zip,
-    }
+    };
   }
 
   setCompany(company: CompanyInfo) {
     this.formModal.comapanyaddress = company.comapanyaddress;
-    this.formModal.comapnyname = company.comapnyname
+    this.formModal.comapnyname = company.comapnyname;
 
   }
 
@@ -55,7 +55,7 @@ export class FormDataService {
     return {
       comapanyaddress: this.formModal.comapanyaddress,
       comapnyname: this.formModal.comapnyname,
-    }
+    };
   }
 
   submit() {
