@@ -1,5 +1,6 @@
 import {Injectable} from '@angular/core';
 import {Address, CompanyInfo, FormModal, Personal} from "./form-data-module";
+import {AllcustomerService} from "../../../../../provider/allcustomer.service";
 
 @Injectable({
   providedIn: 'root'
@@ -8,7 +9,7 @@ export class FormDataService {
 
   private formModal: FormModal = new FormModal();
 
-  constructor() {
+  constructor(private customerService: AllcustomerService) {
   }
 
   getFormData() {
@@ -59,6 +60,9 @@ export class FormDataService {
   }
 
   submit() {
-    console.log(this.formModal);
+
+    this.customerService.submitData(this.formModal).subscribe(response => {
+
+    });
   }
 }

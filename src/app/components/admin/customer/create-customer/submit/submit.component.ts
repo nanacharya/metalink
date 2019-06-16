@@ -23,5 +23,6 @@ export class SubmitComponent implements OnInit {
 
   submit() {
     this.dataService.submit();
+    this.route.navigate(['admin/createcustomer'])
   }
 }

@@ -12,12 +12,12 @@ function initDb(callback) {
     console.warn("Trying to init DB again!");
     return callback(null, _db);
   }
-  client.connect('mongodb://localhost:27017/users', {useNewUrlParser: true}, connected);
+  client.connect('mongodb://localhost:27017/', {useNewUrlParser: true}, connected);
   function connected(err, db) {
     if (err) {
       return callback(err);
     }
-    // console.log("DB initialized - connected to: " + config.db.connectionString.split("@")[1]);
+     console.log("DB initialized - connected to: " +"mongodb://localhost:27017" );
     _db = db;
     return callback(null, _db);
   }
@@ -25,6 +25,7 @@ function initDb(callback) {
 
 
 function getDb() {
+  console.log("calling database...........");
   assert.ok(_db, "Db has not been initialized. Please called init first.");
   return _db;
 }

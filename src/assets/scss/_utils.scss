@@ -1,0 +1,22 @@
+.ns {
+  &_align {
+    &--center {
+      text-align: center;
+    }
+  }
+
+  &_card {
+    &--md {
+      // width: 332px;
+      // height: 397px;
+      margin: 0 auto;
+    }
+  }
+
+  &_container {
+    &--fluid {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

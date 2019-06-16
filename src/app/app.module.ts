@@ -47,6 +47,7 @@ import {YourInfoComponent} from "./components/admin/customer/create-customer/you
 import {AddressInfoComponent} from "./components/admin/customer/create-customer/address-info/address-info.component";
 import {CompanyInfoComponent} from "./components/admin/customer/create-customer/company-info/company-info.component";
 import {SubmitComponent} from "./components/admin/customer/create-customer/submit/submit.component";
+import {ChartModule} from "primeng/chart";
 
 const routes: Routes = [
   {path: '', component: HeaderhomeComponent},
@@ -122,6 +123,7 @@ const routes: Routes = [
     MatExpansionModule,
     BrowserAnimationsModule,
     MatIconModule,
+    ChartModule,
     AgmCoreModule.forRoot({
       apiKey: "AIzaSyC5MwxNX-MUEU3vHDcd8BK5KfjV4eZSv2I"
     }),

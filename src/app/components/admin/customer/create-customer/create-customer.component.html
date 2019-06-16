@@ -1,4 +1,9 @@
-<div class="form container">
+<div class="header" *ngIf="start">
+  <h1>Registration Form Start Here</h1>
+  <button class="btn btn-primary" (click)="startForm()">Start</button>
+</div>
+
+<div *ngIf="!start" class="form container">
 
   <!--  <div class="liner"></div>-->
 

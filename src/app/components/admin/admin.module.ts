@@ -14,9 +14,17 @@ import {MapsComponent} from './maps/maps.component';
 import {DocumentComponent} from './document/document.component';
 import {AllCustomerComponent} from './customer/all-customer/all-customer.component';
 import {AgGridModule} from "ag-grid-angular";
-import {MatExpansionModule} from "@angular/material";
+import {
+  MatCardModule,
+  MatDatepickerModule,
+  MatExpansionModule,
+  MatFormFieldModule, MatInputModule, MatNativeDateModule,
+  MatSelectModule
+} from "@angular/material";
 import {CreateCustomerComponent} from './customer/create-customer/create-customer.component';
 import {CreateCustomerModule} from "./customer/create-customer/create-customer.module";
+import {ChartModule} from "primeng/chart";
+import {FormsModule} from "@angular/forms";
 
 const adminRoute: Routes = [
   {
@@ -49,7 +57,15 @@ const adminRoute: Routes = [
     RouterModule.forRoot(adminRoute),
     AgGridModule,
     MatExpansionModule,
-    CreateCustomerModule
+    CreateCustomerModule,
+    MatCardModule,
+    ChartModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    FormsModule,
+    MatDatepickerModule,
+    MatInputModule,
+    MatNativeDateModule
   ]
 })
 
