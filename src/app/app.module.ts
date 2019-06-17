@@ -27,7 +27,7 @@ import {AllcustomerService} from "./provider/allcustomer.service";
 import {HttpClientModule} from "@angular/common/http";
 
 import "ag-grid-enterprise";
-import {MatExpansionModule} from "@angular/material";
+import {MatButtonModule, MatExpansionModule, MatMenuModule, MatRadioModule} from '@angular/material';
 import {MatIconModule} from '@angular/material/icon'
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {AgmCoreModule} from "@agm/core";
@@ -53,13 +53,13 @@ const routes: Routes = [
   {path: '', component: HeaderhomeComponent},
   {path: 'services', component: HeaderservicesComponent},
   {path: 'support', component: HeadercontactComponent},
-  {path: 'onlineservices', component: HeaderonlineserviceComponent},
+  {path: 'onlineservices/:type', component: HeaderonlineserviceComponent},
   {path: 'company', component: HeadercompanyComponent},
   {path: 'career', component: HeadercarrerComponent},
   {path: 'contact', component: HeadersupportComponent},
   {path: 'billpayment', component: HeaderbillpaymentComponent},
   {
-    path: "admin", component: AdminComponent,
+    path: "admin/:id", component: AdminComponent,
     children: [
       {path: "home", component: HomeComponent},
       {path: "customer", component: CustomerComponent},
@@ -125,9 +125,12 @@ const routes: Routes = [
     MatIconModule,
     ChartModule,
     AgmCoreModule.forRoot({
-      apiKey: "AIzaSyC5MwxNX-MUEU3vHDcd8BK5KfjV4eZSv2I"
+      apiKey: 'AIzaSyC5MwxNX-MUEU3vHDcd8BK5KfjV4eZSv2I'
     }),
-    CreateCustomerModule
+    CreateCustomerModule,
+    MatButtonModule,
+    MatMenuModule,
+    MatRadioModule
   ],
   providers: [AllcustomerService],
   bootstrap: [AppComponent]

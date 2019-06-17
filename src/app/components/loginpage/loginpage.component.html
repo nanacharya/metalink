@@ -1,28 +1,28 @@
 <!-- https://bootsnipp.com/snippets/qrQRB -->
 <!-- https://bootsnipp.com/tags/login?page=7 -->
 <div class="main">
-<div class="logo">
-
-<img src="../../../../src/assets/images/logometalink.jpg" alt="Meta Link">
+  <div class="logo">
+    <img src="../../../assets/images/logometalink.jpg" alt="Meta Link">
   </div>
 
-<div>
-  <form [formGroup]="loginForm" (ngSubmit)="submitlog()">
-<div class="formDiv">
-        <div class="adminheader">Admin Login  </div>
+  <div>
+    <form [formGroup]="loginForm" (ngSubmit)="submitlog()">
+      <div class="formDiv">
+        <div class="adminheader">{{loginType}}</div>
         <hr>
 
-      <label for="username">Username</label>
-        <input type="text" name="username" class="form-control" formControlName="username" placeholder="Type User Name" value="">
+        <label for="username">Username</label>
+        <input type="text" name="username" class="form-control" formControlName="username" placeholder="Type User Name"
+               value="">
 
-        <label for="password" >Password</label>
+        <label for="password">Password</label>
         <input type="password" class="form-control" formControlName="password" placeholder="Enter Your Password">
 
-      <button class="submitBtn" type="submit" name="button">Login</button>
-</div>
-      </form>
+        <button class="submitBtn" type="submit" name="button">Login</button>
+      </div>
+    </form>
 
-
-    </div>
 
   </div>
+
+</div>

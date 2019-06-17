@@ -1,19 +1,80 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" routerLink="" >Meta Link</a>
+  <a class="navbar-brand" routerLink="">Meta Link</a>
 
-<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"  aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-  <span class="navbar-toggler-icon"></span>
-</button>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
 
-<div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-  <ul class="navbar-nav mr-auto">
-    <li class="nav-item" *ngFor="let item of menuItems">
-      <a class="nav-link" [routerLink]="item.route">{{item.text}}</a>
+    <ul class="navbar-nav mr-auto">
+      <!--    <li class="nav-item" *ngFor="let item of menuItems">-->
+      <!--      <a class="nav-link" [routerLink]="item.route">{{item.text}}</a>-->
 
-    </li>
-  </ul>
-</div>
+      <!--    </li>-->
+      <li>
+        <button mat-button class="mainMenu" [matMenuTriggerFor]="services">Services</button>
+        <mat-menu #services="matMenu">
+          <!--          <button mat-menu-item></button>-->
+          <a mat-menu-item class="nav-link" routerLink="/services">Main Services</a>
+          <a mat-menu-item class="nav-link" routerLink="/services">New Offer</a>
+        </mat-menu>
+      </li>
+
+
+      <li>
+        <button mat-button class="mainMenu" [matMenuTriggerFor]="support">Support</button>
+        <mat-menu #support="matMenu">
+          <!--          <button mat-menu-item></button>-->
+          <a mat-menu-item class="nav-link" routerLink="/services">FAQs</a>
+          <a mat-menu-item class="nav-link" routerLink="/support">Router</a>
+          <a mat-menu-item class="nav-link" routerLink="/support">Router Setting</a>
+        </mat-menu>
+      </li>
+
+
+      <li>
+        <button mat-button class="mainMenu" [matMenuTriggerFor]="billandpayment">Bill And Payment</button>
+        <mat-menu #billandpayment="matMenu">
+          <!--          <button mat-menu-item></button>-->
+          <a mat-menu-item class="nav-link" routerLink="/billpayment">MetaLink Office</a>
+          <a mat-menu-item class="nav-link" routerLink="/billpayment">ePayment</a>
+          <a mat-menu-item class="nav-link" routerLink="/billpayment">Internet Banking</a>
+        </mat-menu>
+      </li>
+
+      <li>
+        <button mat-button class="mainMenu" [matMenuTriggerFor]="onlineservice">Online Services</button>
+        <mat-menu #onlineservice="matMenu">
+          <a mat-menu-item class="nav-link" [routerLink]="['/onlineservices','user']">User Login</a>
+          <a mat-menu-item class="nav-link" [routerLink]="['/onlineservices','admin']">Admin Login</a>
+        </mat-menu>
+      </li>
+
+      <li>
+        <button mat-button class="mainMenu">
+          <a mat-menu-item class="nav-link mainMenu mat-button" routerLink="/admin">Admin Login</a>
+
+        </button>
+
+      </li>
+
+      <li>
+        <button mat-button class="mainMenu">
+          <a mat-menu-item class="nav-link mainMenu mat-button" routerLink="/career">Carrer</a>
+        </button>
+      </li>
+
+
+      <li>
+        <button mat-button class="mainMenu">
+          <a mat-menu-item class="nav-link mainMenu" routerLink="/contact">Contact</a>
+        </button>
+      </li>
+
+    </ul>
+  </div>
 
 </nav>
