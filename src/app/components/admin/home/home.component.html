@@ -1,15 +1,15 @@
+<div class="dashboard">
+
 <mat-card class="example-card">
-  <mat-card-header style="background-color: yellow">
+  <mat-card-header >
     <div mat-card-avatar class="example-header-image"></div>
     <mat-card-title>Shiba Inu</mat-card-title>
-    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
   </mat-card-header>
   <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
   <mat-card-content>
     <p>
       The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-      A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-      bred for hunting.
+      A small.
     </p>
   </mat-card-content>
   <mat-card-actions>
@@ -19,17 +19,17 @@
 </mat-card>
 
 
-<mat-card>
-  <mat-card-header style="background-color: red">
+<mat-card class="example-card">
+  <mat-card-header >
     <mat-card-title>NS Exceptions</mat-card-title>
   </mat-card-header>
   <mat-card-content>
-    <p-chart type="doughnut" [data]="exceptions" [options]="options" width="50%" height="318"></p-chart>
+    <p-chart type="doughnut" [data]="exceptions" [options]="options" width="100%" height="318"></p-chart>
   </mat-card-content>
 </mat-card>
 
 
-<mat-card  class="mycard" style=" background-color: #e6c9da">
+<mat-card  class="example-card" style=" background-color: #e6c9da">
   <mat-card-header>
     <div class="header">
       <span>Empty Car Request</span>
@@ -85,3 +85,8 @@
 
 </mat-card>
 
+</div>
+
+<div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
+  <div class="example-box" *ngFor="let movie of movies" cdkDrag>{{movie}}</div>
+</div>

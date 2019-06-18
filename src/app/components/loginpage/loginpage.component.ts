@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FormGroup, FormControl} from '@angular/forms';
 import {ActivatedRoute, Router} from '@angular/router';
+import {LoginService} from "../../provider/login.service";
 
 @Component({
   selector: 'ml-loginpage',
@@ -10,13 +11,18 @@ import {ActivatedRoute, Router} from '@angular/router';
 export class LoginpageComponent implements OnInit {
 
   loginType: string;
+  isLoginSuccess: boolean;
 
   loginForm = new FormGroup({
     'username': new FormControl('', []),
     'password': new FormControl('', [])
   });
 
-  constructor(private router: Router, private activatedRouter: ActivatedRoute) {
+  constructor(private router: Router,
+              private activatedRouter: ActivatedRoute,
+              private loginService: LoginService) {
+
+    this.isLoginSuccess = true;
   }
 
   ngOnInit() {
@@ -29,7 +35,21 @@ export class LoginpageComponent implements OnInit {
 
   submitlog() {
     console.log(this.loginForm.value);
-    this.router.navigate(['/admin', 'user']);
+
+    this.loginService.login(this.loginForm.value).subscribe(response => {
+      debugger;
+      console.log(response);
+      console.log(response["entity"]);
+      if (response["entity"]) {
+        this.router.navigate(['/admin', 'user']);
+      } else {
+        this.isLoginSuccess = false;
+
+        setTimeout(() => {
+          this.isLoginSuccess = true;
+        }, 3000)
+      }
+    });
   }
 
 }

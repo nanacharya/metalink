@@ -48,10 +48,11 @@ import {AddressInfoComponent} from "./components/admin/customer/create-customer/
 import {CompanyInfoComponent} from "./components/admin/customer/create-customer/company-info/company-info.component";
 import {SubmitComponent} from "./components/admin/customer/create-customer/submit/submit.component";
 import {ChartModule} from "primeng/chart";
+import {AuthGuard} from "./authGuard/auth.guard";
 
 const routes: Routes = [
   {path: '', component: HeaderhomeComponent},
-  {path: 'services', component: HeaderservicesComponent},
+  {path: 'services', component: HeaderservicesComponent, canActivate: [AuthGuard]},
   {path: 'support', component: HeadercontactComponent},
   {path: 'onlineservices/:type', component: HeaderonlineserviceComponent},
   {path: 'company', component: HeadercompanyComponent},
@@ -59,10 +60,10 @@ const routes: Routes = [
   {path: 'contact', component: HeadersupportComponent},
   {path: 'billpayment', component: HeaderbillpaymentComponent},
   {
-    path: "admin/:id", component: AdminComponent,
+    path: "admin/:id", component: AdminComponent, canActivate: [AuthGuard],
     children: [
-      {path: "home", component: HomeComponent},
-      {path: "customer", component: CustomerComponent},
+      {path: "home", component: HomeComponent, canActivateChild: [AuthGuard]},
+      {path: "customer", component: CustomerComponent, canActivateChild: [AuthGuard]},
       {path: "profile", component: ProfileComponent},
       {path: "location", component: LocationComponent},
       {path: "support", component: SupportComponent},
@@ -132,7 +133,7 @@ const routes: Routes = [
     MatMenuModule,
     MatRadioModule
   ],
-  providers: [AllcustomerService],
+  providers: [AllcustomerService,AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule {

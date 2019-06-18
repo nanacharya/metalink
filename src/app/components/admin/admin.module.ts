@@ -25,28 +25,29 @@ import {CreateCustomerComponent} from './customer/create-customer/create-custome
 import {CreateCustomerModule} from "./customer/create-customer/create-customer.module";
 import {ChartModule} from "primeng/chart";
 import {FormsModule} from "@angular/forms";
+import {DragDropModule} from "@angular/cdk/drag-drop";
 
 const adminRoute: Routes = [
-  {
-    path: "admin", component: AdminComponent,
-    children: [
-      //  { path: "", component: AdminComponent },
-      {path: "home", component: HomeComponent},
-      {path: "customer", component: CustomerComponent},
-      {path: "profile", component: ProfileComponent},
-      {path: "location", component: LocationComponent},
-      {path: "support", component: SupportComponent},
-      {path: "finance", component: FiberComponent},
-      {path: "fiber", component: AdminComponent},
-      {path: "prospect", component: ProspectsComponent},
-      {path: "map", component: MapsComponent},
-      {path: "document", component: DocumentComponent},
-      {path: "allcustomer", component: AllCustomerComponent},
-      {path: "createcustomer", component: CreateCustomerComponent}
-
-
-    ]
-  }
+  // {
+  //   path: "admin", component: AdminComponent,
+  //   children: [
+  //     //  { path: "", component: AdminComponent },
+  //     {path: "home", component: HomeComponent},
+  //     {path: "customer", component: CustomerComponent},
+  //     {path: "profile", component: ProfileComponent},
+  //     {path: "location", component: LocationComponent},
+  //     {path: "support", component: SupportComponent},
+  //     {path: "finance", component: FiberComponent},
+  //     {path: "fiber", component: AdminComponent},
+  //     {path: "prospect", component: ProspectsComponent},
+  //     {path: "map", component: MapsComponent},
+  //     {path: "document", component: DocumentComponent},
+  //     {path: "allcustomer", component: AllCustomerComponent},
+  //     {path: "createcustomer", component: CreateCustomerComponent}
+  //
+  //
+  //   ]
+  // }
 ];
 
 @NgModule({
@@ -65,7 +66,8 @@ const adminRoute: Routes = [
     FormsModule,
     MatDatepickerModule,
     MatInputModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    DragDropModule
   ]
 })
 
