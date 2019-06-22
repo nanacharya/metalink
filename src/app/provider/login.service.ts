@@ -6,12 +6,22 @@ import {HttpClient} from "@angular/common/http";
 })
 export class LoginService {
 
-  constructor(private httpClient: HttpClient) {
+  private isLogged: boolean;
 
+  constructor(private httpClient: HttpClient) {
+    this.isLogged = false;
   }
 
   login(data) {
     console.log(data);
     return this.httpClient.post("http://localhost:9090/login", data)
+  }
+
+  setLoggedIn(value) {
+    this.isLogged = value;
+  }
+
+  get isLoggedIn() {
+    return this.isLogged;
   }
 }

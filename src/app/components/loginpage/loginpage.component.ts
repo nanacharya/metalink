@@ -37,13 +37,12 @@ export class LoginpageComponent implements OnInit {
     console.log(this.loginForm.value);
 
     this.loginService.login(this.loginForm.value).subscribe(response => {
-      debugger;
-      console.log(response);
-      console.log(response["entity"]);
       if (response["entity"]) {
-        this.router.navigate(['/admin', 'user']);
+        this.router.navigate(['/admin']);
+        this.loginService.setLoggedIn(true);
       } else {
         this.isLoginSuccess = false;
+        this.loginService.setLoggedIn(false);
 
         setTimeout(() => {
           this.isLoginSuccess = true;

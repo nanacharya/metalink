@@ -60,7 +60,7 @@ const routes: Routes = [
   {path: 'contact', component: HeadersupportComponent},
   {path: 'billpayment', component: HeaderbillpaymentComponent},
   {
-    path: "admin/:id", component: AdminComponent, canActivate: [AuthGuard],
+    path: "admin", component: AdminComponent, canActivate: [AuthGuard],
     children: [
       {path: "home", component: HomeComponent, canActivateChild: [AuthGuard]},
       {path: "customer", component: CustomerComponent, canActivateChild: [AuthGuard]},
@@ -133,7 +133,7 @@ const routes: Routes = [
     MatMenuModule,
     MatRadioModule
   ],
-  providers: [AllcustomerService,AuthGuard],
+  providers: [AllcustomerService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule {
