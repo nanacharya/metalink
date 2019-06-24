@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FormGroup, FormControl} from '@angular/forms';
 import {ActivatedRoute, Router} from '@angular/router';
-import {LoginService} from "../../provider/login.service";
+import {LoginService} from '../../provider/login.service';
 
 @Component({
   selector: 'ml-loginpage',
@@ -34,11 +34,17 @@ export class LoginpageComponent implements OnInit {
   }
 
   submitlog() {
+    this.loginType === 'Admin Login'?this.adminLogin():this.userLogin();
     console.log(this.loginForm.value);
 
+
+  }
+
+  private adminLogin() {
     this.loginService.login(this.loginForm.value).subscribe(response => {
-      if (response["entity"]) {
+      if (response['entity']) {
         this.router.navigate(['/admin']);
+        sessionStorage.setItem("admin", JSON.stringify(response['entity']));
         this.loginService.setLoggedIn(true);
       } else {
         this.isLoginSuccess = false;
@@ -46,9 +52,27 @@ export class LoginpageComponent implements OnInit {
 
         setTimeout(() => {
           this.isLoginSuccess = true;
-        }, 3000)
+        }, 3000);
+      }
+    });
+
+  }
+
+  private userLogin() {
+    this.loginService.userLogin(this.loginForm.value).subscribe(response => {
+      if (response['entity']) {
+        this.router.navigate(['/customer']);
+        sessionStorage.setItem("customer", JSON.stringify(response['entity']));
+
+        this.loginService.setLoggedIn(true);
+      } else {
+        this.isLoginSuccess = false;
+        this.loginService.setLoggedIn(false);
+
+        setTimeout(() => {
+          this.isLoginSuccess = true;
+        }, 3000);
       }
     });
   }
-
 }

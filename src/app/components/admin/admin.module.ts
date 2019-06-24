@@ -24,8 +24,9 @@ import {
 import {CreateCustomerComponent} from './customer/create-customer/create-customer.component';
 import {CreateCustomerModule} from "./customer/create-customer/create-customer.module";
 import {ChartModule} from "primeng/chart";
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {DragDropModule} from "@angular/cdk/drag-drop";
+import { ExceptionWidgetComponent } from './dashboard-widgets/exception-widget/exception-widget.component';
 
 const adminRoute: Routes = [
   // {
@@ -52,7 +53,7 @@ const adminRoute: Routes = [
 
 @NgModule({
   declarations: [HomeComponent, CreateCustomerComponent,
-    CustomerComponent, ProfileComponent, LocationComponent, SupportComponent, FinanceComponent, FiberComponent, ProspectsComponent, MapsComponent, DocumentComponent, AllCustomerComponent, CreateCustomerComponent],
+    CustomerComponent, ProfileComponent, LocationComponent, SupportComponent, FinanceComponent, FiberComponent, ProspectsComponent, MapsComponent, DocumentComponent, AllCustomerComponent, CreateCustomerComponent, ExceptionWidgetComponent],
   imports: [
     CommonModule,
     RouterModule.forRoot(adminRoute),
@@ -67,7 +68,8 @@ const adminRoute: Routes = [
     MatDatepickerModule,
     MatInputModule,
     MatNativeDateModule,
-    DragDropModule
+    DragDropModule,
+    ReactiveFormsModule
   ]
 })
 

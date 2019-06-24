@@ -1,0 +1,21 @@
+//https://mycolor.space/
+
+.panel-header {
+  background-image: linear-gradient(to right, #4ae6c7, #f0ea42, #fbccf2, #ff7f8c, #fe6961, #f47743, #e28725, #c99600, #aab839, #88d375, #67e9b5, #5ffbf1);
+
+}
+
+.first {
+  grid-area: first;
+
+}
+
+.second {
+  grid-area: second;
+}
+
+.grid-container {
+margin: 10px;
+  display: grid;
+  grid-template-areas: 'first first first first first first second';
+}

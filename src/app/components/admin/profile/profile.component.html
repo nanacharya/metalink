@@ -1,3 +1,51 @@
-<p>
-  profile works!
-</p>
+<a href="https://medium.com/@bastijns.jeroen/angular-reusable-form-components-f9233193138c
+">https://medium.com/@bastijns.jeroen/angular-reusable-form-components-f9233193138c
+</a>
+
+<form [formGroup]="form" (ngSubmit)="save()">
+  <div class="form-group">
+    <label for="firstname">firstname</label>
+    <input name="firstname" class="form-control" type="text" formControlName="firstname"/>
+    <div *ngIf="form.get('firstname').touched">
+      <div *ngIf="form.get('firstname').hasError('required')">This field is required.</div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="lastname">lastname</label>
+    <input name="lastname" class="form-control" type="text" formControlName="lastname"/>
+    <div *ngIf="form.get('lastname').touched">
+      <div *ngIf="form.get('lastname').hasError('required')">This field is required.</div>
+    </div>
+  </div>
+  <div formGroupName="address">
+    <div class="form-group">
+      <label for="street">street</label>
+      <input name="street" class="form-control" type="text" formControlName="street"/>
+      <div *ngIf="form.get('address.street').touched">
+        <div *ngIf="form.get('address.street').hasError('required')">This field is required.</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="housenumber">housenumber</label>
+      <input name="housenumber" class="form-control" type="text" formControlName="housenumber"/>
+      <div *ngIf="form.get('address.housenumber').touched">
+        <div *ngIf="form.get('address.housenumber').hasError('required')">This field is required.</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="city">city</label>
+      <input name="city" class="form-control" type="text" formControlName="city"/>
+      <div *ngIf="form.get('address.city').touched">
+        <div *ngIf="form.get('address.city').hasError('required')">This field is required.</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="zipcode">zipcode</label>
+      <input name="zipcode" class="form-control" type="text" formControlName="zipcode"/>
+      <div *ngIf="form.get('address.zipcode').touched">
+        <div *ngIf="form.get('address.zipcode').hasError('required')">This field is required.</div>
+      </div>
+    </div>
+  </div>
+  <button id="save" type="submit" [disabled]="!form.valid">save</button>
+</form>

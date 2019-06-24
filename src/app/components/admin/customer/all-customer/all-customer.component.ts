@@ -45,12 +45,13 @@ export class AllCustomerComponent implements OnInit {
 
 
   ngOnInit() {
-    // this.service.getAllUser().subscribe(response => {
-    //   this.rowData = response;
-    // });
-    this.http.get('https://api.myjson.com/bins/15psn9').subscribe(result => {
-      this.rowData = result;
+    this.service.getAllUser().subscribe(response => {
+      debugger;
+      this.rowData = response;
     });
+    // this.http.get('https://api.myjson.com/bins/15psn9').subscribe(result => {
+    //   this.rowData = result;
+    // });
 
   }
 

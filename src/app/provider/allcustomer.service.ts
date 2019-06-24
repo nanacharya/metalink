@@ -6,8 +6,11 @@ import {HttpClient} from '@angular/common/http';
 })
 export class AllcustomerService {
 
+  url: any;
+
   constructor(private httpClient: HttpClient) {
 
+    this.url = 'http://localhost:9090/addUser';
   }
 
   getTestData() {
@@ -17,10 +20,10 @@ export class AllcustomerService {
 //add user to the database...
   submitData(data) {
     // return this.httpClient.post("http://localhost:3000/api/addUser" ,data);
-    return this.httpClient.post("http://localhost:8080/addUser", data);
+    return this.httpClient.post('http://localhost:9090/addUser', data);
   }
 
   getAllUser() {
-    return this.httpClient.get("http://localhost:8080/getAllUser");
+    return this.httpClient.get('http://localhost:9090/getAllUser');
   }
 }

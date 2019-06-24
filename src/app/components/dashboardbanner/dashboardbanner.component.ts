@@ -31,7 +31,7 @@ export class DashboardbannerComponent implements OnInit {
     this.carouselTileItems=[
       {
         imgSrc:`https://picsum.photos/900/500?random&t=${Math.random()}`,
-        header:'Welcome to University',
+        header:'Welcome to Metalink',
         description:'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form',
         ctaInfo:'All Courses',
         link:"https://picsum.photos/900/500?random&t=${Math.random()}"
@@ -41,7 +41,7 @@ export class DashboardbannerComponent implements OnInit {
       },
       {
         imgSrc:`https://picsum.photos/900/500?random&t=${Math.random()}`,
-        header:'Admission open 2018',
+        header:'New features on 2019',
         description:'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form',
         ctaInfo:'Admission',
         link:"https://picsum.photos/900/500?random&t=${Math.random()}"
@@ -50,7 +50,7 @@ export class DashboardbannerComponent implements OnInit {
       },
       {
         imgSrc:`https://picsum.photos/900/500?random&t=${Math.random()}`,
-        header:'Education Master',
+        header:'Admin Login',
         description:'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form',
         ctaInfo:'All Courses',
         link:"https://picsum.photos/900/500?random&t=${Math.random()}"
@@ -59,7 +59,7 @@ export class DashboardbannerComponent implements OnInit {
       },
       {
         imgSrc:`https://picsum.photos/900/500?random&t=${Math.random()}`,
-        header:'Education Master',
+        header:'Customer Login',
         description:'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form',
         ctaInfo:'All Courses',
         link:"https://picsum.photos/900/500?random&t=${Math.random()}"
@@ -67,42 +67,42 @@ export class DashboardbannerComponent implements OnInit {
 
       },
 
-      {
-        imgSrc:`https://picsum.photos/900/500?random&t=${Math.random()}`,
-        header:'Education Master',
-        description:'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form',
-        ctaInfo:'All Courses',
-        link:"https://picsum.photos/900/500?random&t=${Math.random()}"
-
-
-      },
-      {
-        imgSrc:`https://picsum.photos/900/500?random&t=${Math.random()}`,
-        header:'Education Master',
-        description:'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form',
-        ctaInfo:'All Courses',
-        link:"https://picsum.photos/900/500?random&t=${Math.random()}"
-
-
-      },
-      {
-        imgSrc:`https://picsum.photos/900/500?random&t=${Math.random()}`,
-        header:'Education Master',
-        description:'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form',
-        ctaInfo:'All Courses',
-        link:"https://picsum.photos/900/500?random&t=${Math.random()}"
-
-
-      },
-      {
-        imgSrc:`https://picsum.photos/900/500?random&t=${Math.random()}`,
-        header:'Education Master',
-        description:'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form',
-        ctaInfo:'All Courses',
-        link:"https://picsum.photos/900/500?random&t=${Math.random()}"
-
-
-      }
+      // {
+      //   imgSrc:`https://picsum.photos/900/500?random&t=${Math.random()}`,
+      //   header:'Education Master',
+      //   description:'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form',
+      //   ctaInfo:'All Courses',
+      //   link:"https://picsum.photos/900/500?random&t=${Math.random()}"
+      //
+      //
+      // },
+      // {
+      //   imgSrc:`https://picsum.photos/900/500?random&t=${Math.random()}`,
+      //   header:'Education Master',
+      //   description:'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form',
+      //   ctaInfo:'All Courses',
+      //   link:"https://picsum.photos/900/500?random&t=${Math.random()}"
+      //
+      //
+      // },
+      // {
+      //   imgSrc:`https://picsum.photos/900/500?random&t=${Math.random()}`,
+      //   header:'Education Master',
+      //   description:'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form',
+      //   ctaInfo:'All Courses',
+      //   link:"https://picsum.photos/900/500?random&t=${Math.random()}"
+      //
+      //
+      // },
+      // {
+      //   imgSrc:`https://picsum.photos/900/500?random&t=${Math.random()}`,
+      //   header:'Education Master',
+      //   description:'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form',
+      //   ctaInfo:'All Courses',
+      //   link:"https://picsum.photos/900/500?random&t=${Math.random()}"
+      //
+      //
+      // }
     ]
   }
 

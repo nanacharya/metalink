@@ -1,0 +1,17 @@
+<div class="grid-container">
+  <div class="account-details">
+    <span>  Username: </span> {{user.username}} <br>
+    <span>   Email: </span>  {{user.email}}<br>
+    <span>Phone:</span>     {{user.phone}} <br>
+    <button class="btn btn-primary" (click)="updateContact()">Update Contact Details</button>
+  </div>
+
+  <div class="user-status">
+    <span>User Status </span> <span class="alert alert-success" *ngIf="user.status==='active'">ACTIVE</span>  <span class="alert alert-danger" *ngIf="user.status==='inactive'">In Active</span> <br><br>
+    <span> Ip Address:</span>     {{user.ipaddress}} <br>
+    <span> MAC Address:</span>      {{user.macaddress}} <br>
+    <button class="btn btn-primary" (click)="updateSsid()">Update SSID</button>
+  </div>
+
+
+</div>

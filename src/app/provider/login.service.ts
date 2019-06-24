@@ -14,7 +14,7 @@ export class LoginService {
 
   login(data) {
     console.log(data);
-    return this.httpClient.post("http://localhost:9090/login", data)
+    return this.httpClient.post("http://localhost:9090/adminLogin", data)
   }
 
   setLoggedIn(value) {
@@ -23,5 +23,9 @@ export class LoginService {
 
   get isLoggedIn() {
     return this.isLogged;
+  }
+
+  userLogin(data: any) {
+    return this.httpClient.post("http://localhost:9090/userLogin", data)
   }
 }
