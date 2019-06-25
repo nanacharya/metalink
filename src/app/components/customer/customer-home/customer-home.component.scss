@@ -1,15 +1,30 @@
+//
+//.profile-image{
+//  //  grid-area: profileImage;
+//  width: 200px;
+//  height: 200px;
+//}
 
 .account-details {
   grid-area: details;
+  height: auto;
 }
 
 .user-status {
   grid-area: status;
+  height: auto;
 }
+
+img {
+  grid-area: image1;
+  height: auto;
+}
+
 
 .grid-container {
   display: grid;
-  grid-template-areas: 'details status';
+  margin: 10px;
+  grid-template-areas: 'image1 details status';
 
   span {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;

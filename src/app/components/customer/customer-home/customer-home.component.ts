@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {UserModel} from '../../../model/user-model';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'ml-customer-home',
@@ -10,7 +11,7 @@ export class CustomerHomeComponent implements OnInit {
 
   user: UserModel;
 
-  constructor() {
+  constructor(private route: Router) {
   }
 
   ngOnInit() {
@@ -22,7 +23,7 @@ export class CustomerHomeComponent implements OnInit {
   }
 
   updateContact() {
-
+    this.route.navigate(['/customer/customer-form']);
   }
 
   updateSsid() {

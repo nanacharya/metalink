@@ -1,5 +1,6 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
+import {UserModel} from '../model/user-model';
 
 @Injectable({
   providedIn: 'root'
@@ -25,5 +26,10 @@ export class AllcustomerService {
 
   getAllUser() {
     return this.httpClient.get('http://localhost:9090/getAllUser');
+  }
+
+  updateOrAddUser(user: UserModel) {
+    return this.httpClient.post('http://localhost:9090/userAddOrDelete',user);
+
   }
 }

@@ -113,6 +113,8 @@ const routes: Routes = [
     path: 'customer', component: MlCustomerComponent,
     children: [
       {path: 'home', component: CustomerHomeComponent},
+      {path: 'customer-form', component: CustomerFormComponent},
+
       {
         path: 'account-service', component: AccountingServiceComponent,
         children: [
